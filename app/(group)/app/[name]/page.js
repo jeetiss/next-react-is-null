@@ -1,3 +1,5 @@
+import { Button } from "@/components/button";
+
 import HelloWorld from "./hello.mdx";
 
 export function generateStaticParams() {
@@ -5,5 +7,11 @@ export function generateStaticParams() {
 }
 
 export default function Page({ params: { name } }) {
-  return <HelloWorld param={name} />;
+  return (
+    <>
+      <HelloWorld param={name} />
+
+      <Button />
+    </>
+  );
 }

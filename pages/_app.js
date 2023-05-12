@@ -1,18 +1,16 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { Providers } from "@/components/providers";
 
 const App = ({ Component, pageProps }) => {
-  useEffect(() => {
-    console.log("wow");
-  }, []);
-
   return (
     <>
       <Head>
         <title>Hello pages</title>
       </Head>
 
-      <Component {...pageProps} />
+      <Providers>
+        <Component {...pageProps} />
+      </Providers>
     </>
   );
 };
